@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+    <style>
+    	*{box-sizing: border-box;}
+    	ul,li{list-style: none;}
+    	
+    	
+    	#header{
+    		height: 5.33rem;
+    		background: #3f454f;
+    		padding: 1.66rem 1.41rem 0;
+    	}
+    	#tool_bar{
+    		height: 5.33rem;
+    		width: 100%;
+    	}
+    	#tool_bar>div{
+    		width: 50%;
+    		float:left;
+    	}
+    	#tool_bar i{
+    		color: #fff;
+    		line-height: 3.66rem;
+    	}
+    	.bar_left>i{
+    		float: left;
+    		font-size: 1.66rem;
+    	}
+    	.bar_left>p{
+    		float:left;
+    		color:#fff;
+    		padding-left: 3%;
+    		font-weight: 900;
+    		font-size: 1.16rem;
+    		line-height: 3.66rem;
+    	}
+    	.bar_right{
+    		text-align: end;
+    	}
+    	.bar_right i{
+    		font-size: 1.66rem;
+    	}
+    	
+    	
+    	#tabs{
+    		width: 100%;
+    		height: 9.58rem;
+    		background: #3f454f;
+    	}
+    	#tabs>ul{
+    		width: 100%;
+    		height: 100%;
+    	}
+    	#tabs>ul>li{
+    		width: 25%;
+    		height: 50%;
+    		float:left;
+    		position: relative;
+    		top: 25%;
+    		bottom: 25%;
+    		color: white;
+    		text-align: center;
+    	}
+    	#tabs>ul>li>i{
+    		font-size: 2.91rem;
+    	}
+    	#tabs>ul>li>p{
+    		padding-top: 1.25rem;
+    		font-size: 1.16rem;
+    	}
+    	
+    	
+    	#content>ul{
+    		width: 100%;
+    		float: left;
+    		margin-top: 0.08rem;
+    		margin-bottom: 4.08rem;
+    	}
+    	#content>ul>li{
+    		width: 25%;
+    		float: left;
+    		text-align: center;
+    		padding-top: 1.91rem;
+    		padding-bottom: 1.5rem;
+    		border-top:1px solid #e6e6e6;
+    		border-right: 1px solid #e6e6e6;
+    	}
+    	#content>ul>li>p{
+    		font-size:0.91rem;
+    	}
+    	#content>ul>li:nth-child(1)>i{
+    		color:#2eb3e8;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(2)>i{
+    		color:#29ab91;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(3)>i{
+    		color:#dd2727;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(4)>i{
+    		color:#2eb3e8;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(5)>i{
+    		color:#f96268;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(6)>i{
+    		color:#ffb359;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(7)>i{
+    		color:#2eb3e8;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(8)>i{
+    		color:#2eb3e8;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(9)>i{
+    		color:#f96268;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(10)>i{
+    		color:#f96268;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(11)>i{
+    		color:#36bc99;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(12)>i{
+    		color:#ffb359;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(13)>i{
+    		color:#f96268;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(14)>i{
+    		color:#f96268;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(15)>i{
+    		color:#2eb3e8;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(16)>i{
+    		color:#2eb3e8;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(17)>i{
+    		color:#2eb3e8;
+    		font-size: 2.25rem;
+    	}
+    	#content>ul>li:nth-child(18)>i{
+    		font-size: 2.25rem;
+    	}
+    	
+    	
+    	#nav{
+    		width: 100%;
+    		height: 4.08rem;
+    		position: fixed;
+    		left: 0;
+    		bottom: 0;
+    		background: #fff;
+    		border-top: 1px solid #e6e6e6;
+    	}
+    	#nav>ul{
+    		height: 100%;
+    		width: 100%;
+    	}
+    	#nav li{
+    		width: 25%;
+    		height: 80%;
+    		float:left;
+    		text-align: center;
+    		position:relative;
+    		top:10%;
+    		bottom:10%;
+    	}
+    	#nav i{
+    		font-size: 1.83rem;
+    	}
+    	#nav>ul>li:hover{
+    		color:#00aaee;
+    	}
+    	#nav p{
+    		font-size: 0.83rem;
+    	}
+    </style>
+</head>
+<body>
+	<div id="header">
+		<div id="tool_bar">
+			<div class="bar_left">
+				<i class="iconfont">&#xe66b;</i>
+				<p>账单</p>
+			</div>
+			<div class="bar_right">
+				<i class="iconfont">&#xe62e;</i>
+				<i class="iconfont">&#xe62f;</i>
+				<i class="iconfont">&#xe635;</i>
+			</div>
+		</div>
+	</div>
+	<div id="tabs">
+		<ul>
+			<li>
+				<i class="iconfont">&#xe638;</i>
+				<p>扫一扫</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe61e;</i>
+				<p>付款</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe66c;</i>
+				<p>卡券</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe661;</i>
+				<p>咻一咻</p>
+			</li>
+		</ul>
+	</div>
+	<div id="content">
+		<ul>
+			<li>
+				<i class="iconfont">&#xe60c;</i>
+				<p>机票火车票</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe665;</i>
+				<p>服务窗</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe757;</i>
+				<p>天猫超市</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe60f;</i>
+				<p>记账本</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe609;</i>
+				<p>股票</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe613;</i>
+				<p>我的快递</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe66d;</i>
+				<p>我的客服</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe63a;</i>
+				<p>城市服务</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe66f;</i>
+				<p>亲情圈</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe60e;</i>
+				<p>淘宝</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe6f1;</i>
+				<p>加油服务</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe60b;</i>
+				<p>收款</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe615;</i>
+				<p>爱心捐赠</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe66e;</i>
+				<p>超市惠</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe64a;</i>
+				<p>阿里旅行</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe666;</i>
+				<p>世界那么大</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe60d;</i>
+				<p>汇率换算</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe637;</i>
+			</li>
+		</ul>
+	</div>
+	<div id="nav">
+		<ul>
+			<li>
+				<i class="iconfont">&#xe600;</i>
+				<p>支付宝</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe673;</i>
+				<p>口碑</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe644;</i>
+				<p>朋友</p>
+			</li>
+			<li>
+				<i class="iconfont">&#xe63e;</i>
+				<p>我的</p>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
